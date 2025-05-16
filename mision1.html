@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Misión 1: El Llamado del Compás Perdido</title>
+    <link rel="stylesheet" href="style.css"> <!-- Usaremos mismo CSS -->
+</head>
+<body>
+    <div class="glitch-container">
+        <h1>MISIÓN 1: EL LLAMADO DEL COMPÁS PERDIDO</h1>
+        <img src="imagenes/sigilo1.png" width="150">
+    </div>
+
+    <div class="ritual-box">
+        <h2>📜 LORE OFICIAL 📜</h2>
+        <p>El Fragmento Rítmico Ancestral palpita en tu biblioteca de samples.<br>
+        Formato: .WAV / 132 BPM / Key: Desconocida<br>
+        ADVERTENCIA: Contiene pulsos infrasónicos no detectables por equipos estándar</p>
+
+        <h3>🎧 RECURSO OBLIGATORIO:</h3>
+        <audio controls>
+            <source src="samples/SampleA.wav" type="audio/wav">
+            Tu navegador no soporta el ritual auditivo.
+        < 	/audio>
+        <a href="https://drive.google.com/file/d/1zmpvVWvK97FKWmZNWYyx46atJCaRZ7Qo/view?usp=drive_link" download>
+            <button>DESCARGAR SAMPLE A (23.7MB)</button>
+        </a>
+
+        <h3>⚙️ PARÁMETROS DEL RITUAL:</h3>
+        <ul>
+            <li>Duración Mínima: 2:00 minutos</li>
+            <li>BPM: 120-140</li>
+            <li>Elemento Prohibido: Melodías complejas</li>
+        </ul>
+
+        <h3>🔓 ACCESO A MISIÓN 2:</h3>
+        <input type="password" id="clave" placeholder="Contraseña del Sigilo">
+        <button onclick="verificarClave()">VALIDAR</button>
+    </div>
+
+    <script>
+        function verificarClave() {
+            const clavesValidas = ["tamborprimigenio", "132BPM", "duende"];
+            const entrada = document.getElementById('clave').value.toLowerCase();
+            
+            if(clavesValidas.includes(entrada)) {
+                window.location.href = 'mision2.html';
+            } else {
+                alert("ERROR: El Duende rechaza tu síntesis. Intento fallido.");
+            }
+        }
+    </script>
+</body>
+</html>

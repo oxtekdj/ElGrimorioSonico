@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Grimorio Sónico - Inicio</title>
+    <style>
+        :root {
+            --neon-green: #00ff9d;
+            --neon-pink: #ff00ff;
+            --background: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--neon-green);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .glitch-container {
+            text-align: center;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px var(--neon-pink); }
+            50% { text-shadow: -3px -3px var(--neon-pink); }
+            100% { text-shadow: 2px 2px var(--neon-pink); }
+        }
+
+        .ritual-box {
+            border: 3px solid var(--neon-pink);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        button {
+            background: linear-gradient(45deg, #8a2be2, #ff00ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Courier New';
+            font-size: 1.2em;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .warning {
+            color: #ff0000;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch-container">
+        <img src="imagenes/logo.png" alt="El Grimorio Sónico" width="400">
+        <h1>¡LIBERA EL BEAT FANTASMA!</h1>
+        <p class="warning">ADVERTENCIA: Al iniciar, aceptas el pacto sonoro con El Duende del Ritmo</p>
+    </div>
+
+    <div class="ritual-box">
+        <h2>📜 PROLOGO: EL ARCHIVO SEMILLA 📜</h2>
+        <p>// ERROR 404: LORE NO ENCONTRADO //<br>
+        Entre el susurro de servidores ancestrales, un fragmento .WAV se materializó en tu DAW.<br>
+        Su espectrograma revela un glifo imposible... ¿Te atreves a reproducirlo?</p>
+        
+        <center>
+            <button onclick="iniciarRitual()">CARGAR ARCHIVO SEMILLA</button>
+        </center>
+    </div>
+
+    <script>
+        function iniciarRitual() {
+            const respuesta = confirm("¿Jurás crear bajo el compás del Duende?");
+            if(respuesta) {
+                window.location.href = 'mision1.html';
+            } else {
+                alert("El sample se autodestruirá en 5...4...");
+            }
+        }
+    </script>
+</body>
+</html>

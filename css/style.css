@@ -1,0 +1,59 @@
+body {
+    background: #0a0a0a;
+    color: #00ff9d;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.glitched {
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+    50% { text-shadow: -3px 3px #ff00ff, 3px -3px #00ffff; }
+    100% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; }
+}
+
+.lore-box {
+    border: 1px solid #00ff9d;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px #00ff9d55;
+}
+
+.password-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input {
+    background: #000;
+    border: 1px solid #00ff9d;
+    color: #00ff9d;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+button {
+    background: #000;
+    border: 2px solid #00ff9d;
+    color: #00ff9d;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00ff9d;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
